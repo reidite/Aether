@@ -1,3 +1,4 @@
 include ':app'
 rootProject.name = "Aether"
+include ':OpenCV'
 include ':opencv'

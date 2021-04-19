@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Aether</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_viewer3d">Viewer3dActivity</string>
+    <string name="title_activity_main_activity1">MainActivity1</string>
+    <string name="title_activity_what">What</string>
+    <string name="title_activity_principal">PrincipalActivity</string>
+    <string name="title_activity_splash">Aether</string>
 </resources>
