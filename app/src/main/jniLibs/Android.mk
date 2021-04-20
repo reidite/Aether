@@ -4,7 +4,7 @@ OPENCV_INSTALL_MODULES:=on
 OPENCV_LIB_TYPE:=STATIC
 include $(CLEAR_VARS)
 
-include /home/reidite/Libraries/opencv-4.5.2-android-sdk/OpenCV-android-sdk/sdk/native/jni/OpenCV.mk
+include /home/reidite/Libraries/OpenCV-android-sdk/sdk/native/jni/OpenCV.mk
 
 LOCAL_MODULE    := sfmlib
 LOCAL_SRC_FILES := sfmlib.cpp

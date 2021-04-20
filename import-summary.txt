@@ -7,13 +7,6 @@ The following files were *not* copied into the new Gradle project; you
 should evaluate whether these are still needed in your project and if
 so manually move them:
 
-* .idea/
-* .idea/.gitignore
-* .idea/java.iml
-* .idea/misc.xml
-* .idea/modules.xml
-* .idea/workspace.xml
-* AndroidManifest.xml
 * javadoc/
 * javadoc/allclasses-frame.html
 * javadoc/allclasses-noframe.html
@@ -245,16 +238,14 @@ so manually move them:
 * javadoc/script.js
 * javadoc/serialized-form.html
 * javadoc/stylesheet.css
-* res/
-* res/values/
-* res/values/attrs.xml
-* sdk.iml
 
 Moved Files:
 ------------
 Android Gradle projects use a different directory structure than ADT
 Eclipse projects. Here's how the projects were restructured:
 
+* AndroidManifest.xml => opencv/src/main/AndroidManifest.xml
+* res/ => opencv/src/main/res/
 * src/ => opencv/src/main/java/
 * src/org/opencv/engine/OpenCVEngineInterface.aidl => opencv/src/main/aidl/org/opencv/engine/OpenCVEngineInterface.aidl
 

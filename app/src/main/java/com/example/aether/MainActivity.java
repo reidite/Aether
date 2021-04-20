@@ -74,7 +74,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        System.loadLibrary("opencv_java4");
+        System.loadLibrary("opencv_java3");
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         mOpenCvCameraView = (CameraBridgeViewBase) findViewById(R.id.CameraView);
@@ -88,7 +88,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
     private void fullScreen() {
         View decorView = getWindow().getDecorView();
 //		int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
-        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+        int uiOptions = View.SYSTEM_UI_FLAG_IMMERSIVE;
         decorView.setSystemUiVisibility(uiOptions);
     }
 
