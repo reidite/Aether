@@ -30,6 +30,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.widget.LinearLayout;
 import android.content.Intent;
 //import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -68,7 +69,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
     double reErr = 0;
     int count = 0;
     CvCameraViewFrame frame;
-    private ProgressDialog progress;
+    private LinearLayout progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,7 +79,7 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         mOpenCvCameraView = (CameraBridgeViewBase) findViewById(R.id.CameraView);
-        OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_9, this, mLoaderCallback);
+        OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_4_0, this, mLoaderCallback);
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
         mOpenCvCameraView.setMaxFrameSize(1280, 800);
         mOpenCvCameraView.setCvCameraViewListener(this);
@@ -86,10 +87,11 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
     }
 
     private void fullScreen() {
-        View decorView = getWindow().getDecorView();
+//        View decorView = getWindow().getDecorView();
 //		int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
-        int uiOptions = View.SYSTEM_UI_FLAG_IMMERSIVE;
-        decorView.setSystemUiVisibility(uiOptions);
+//        int uiOptions = View.SYSTEM_UI_FLAG_IMMERSIVE;
+//        decorView.setSystemUiVisibility(uiOptions);
+        getWindow().setDecorFitsSystemWindows(true);
     }
 
     public native double updateCurrentImage(long addrIn);
@@ -240,8 +242,8 @@ public class MainActivity extends Activity implements CvCameraViewListener2 {
             }
         }).start();
 
-        progress = new ProgressDialog(this);
-        progress.setMessage("Processando...");
+        progress = new LinearLayout(this);
+        progress.setMessage("Process...");
         progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progress.setCancelable(false);
         progress.setIndeterminate(true);

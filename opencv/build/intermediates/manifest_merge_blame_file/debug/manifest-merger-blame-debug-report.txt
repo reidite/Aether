@@ -4,8 +4,8 @@
 4
 5    <uses-sdk
 6        android:minSdkVersion="1"
-6-->/home/reidite/AndroidStudioProjects/Aether2/opencv/src/main/AndroidManifest.xml
+6-->/home/reidite/AndroidStudioProjects/Aether/opencv/src/main/AndroidManifest.xml
 7        android:targetSdkVersion="29" />
-7-->/home/reidite/AndroidStudioProjects/Aether2/opencv/src/main/AndroidManifest.xml
+7-->/home/reidite/AndroidStudioProjects/Aether/opencv/src/main/AndroidManifest.xml
 8
 9</manifest>
