@@ -1,7 +1,14 @@
 <resources>
-
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="scan_button_margin">6dp</dimen>
+    <dimen name="please_wait_text_size">20sp</dimen>
+    <dimen name="progressbar_size">60dp</dimen>
 
+    <dimen name="action_bar_default_height">48dip</dimen>
+    <dimen name="action_bar_title_text_size">18dp</dimen>
+    <dimen name="action_bar_subtitle_text_size">12dp</dimen>
+    <dimen name="action_bar_subtitle_top_margin">-3dp</dimen>
+    <dimen name="action_bar_subtitle_bottom_margin">5dip</dimen>
 </resources>
