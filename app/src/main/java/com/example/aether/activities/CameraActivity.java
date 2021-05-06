@@ -35,6 +35,7 @@ import com.example.aether.utils.CameraUtils;
 import com.example.aether.utils.Size;
 import com.example.aether.utils.Storage;
 
+
 public class CameraActivity extends Activity {
     public static final String RECONSTRUCTION = "new_reconstruction";
     private CameraPreview mCameraPreview;
