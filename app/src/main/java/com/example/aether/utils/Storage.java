@@ -1,12 +1,12 @@
 package com.example.aether.utils;
 
+import android.content.Context;
 import android.os.Environment;
-
 import java.io.File;
 import java.util.Random;
 
 public class Storage {
-    private static final String DIRECTORY_NAME = "/Android/data/com.example.aether";
+    private static final String DIRECTORY_NAME = "/Aether/data/com.example.aether";
 
     public static String getExternalRootDirectory() {
         return getDirectoryPath(DIRECTORY_NAME);
@@ -23,9 +23,10 @@ public class Storage {
 
     private static String getDirectoryPath(String directory) {
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-            File dir = new File(
-                Environment.getExternalStorageDirectory().getAbsolutePath() + directory);
-            if (dir.mkdirs() || dir.exists()) {
+            String path = Environment.getExternalStorageDirectory().getAbsolutePath() + directory;
+            File dir = new File(path
+                );
+            if ( dir.exists() || dir.mkdirs() ) {
                 return dir.getAbsolutePath();
             } else {
                 throw new RuntimeException("Couldn't create external directory");

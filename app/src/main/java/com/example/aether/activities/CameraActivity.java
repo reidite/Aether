@@ -155,7 +155,7 @@ public class CameraActivity extends Activity {
 
     private Camera openFrontFacingCamera() {
         Camera camera;
-        int camId = CameraInfo.CAMERA_FACING_FRONT;
+        int camId = CameraInfo.CAMERA_FACING_BACK;
         try {
             camera = Camera.open(camId);
         } catch (RuntimeException ex) {
@@ -188,13 +188,13 @@ public class CameraActivity extends Activity {
     private int getDisplayRotation() {
         switch (getWindowManager().getDefaultDisplay().getRotation()) {
             case Surface.ROTATION_0:
-                return 0;
-            case Surface.ROTATION_90:
-                return 90;
-            case Surface.ROTATION_180:
                 return 180;
-            case Surface.ROTATION_270:
+            case Surface.ROTATION_90:
                 return 270;
+            case Surface.ROTATION_180:
+                return 0;
+            case Surface.ROTATION_270:
+                return 90;
         }
 
         return 0;
